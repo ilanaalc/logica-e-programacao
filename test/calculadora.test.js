@@ -17,6 +17,22 @@ describe ('Testes da Função Soma', function () { //agrupamento de testes // sw
         // Compara o resultado com o valor da soma
         expect (resultadoDaSoma).to.equal(35);
     });
+
+    it ('A função deve ser capaz de somar dois números zerados', function () {
+         // Coleta o resultado da função
+        const resultadoDaSoma = somarDoisNumeros(0, 0);
+
+        // Compara o resultado com o valor da soma
+        expect(resultadoDaSoma).to.be.equal(0);
+    }); 
+
+    it ('A função deve ser capaz de somar dois números negativos', function () {
+         // Coleta o resultado da função
+        const resultadoDaSoma = somarDoisNumeros(-10, -5);
+
+        // Compara o resultado com o valor da soma
+        expect(resultadoDaSoma).to.be.equal(-15);
+    });
 });
 
 
